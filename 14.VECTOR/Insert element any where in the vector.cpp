@@ -1,0 +1,64 @@
+//insert element at the given position  of the vector
+
+
+#include<iostream>
+#include<vector>
+
+
+using namespace std;
+
+
+int main()
+{
+    int n,ele;
+
+    cout<<"Enter how many elements you want to store: ";
+    cin>>n;
+
+    vector<int>vector1;
+
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the elements No: "<<i+1<<": ";
+        cin>>ele;
+        vector1.push_back(ele);
+
+    }
+
+    //Before Updating the vector
+
+    cout<<"The elemenets are: ";
+    for(int i=0;i<vector1.size();i++)
+
+    {
+        cout<<vector1[i]<<" ";
+    }
+
+    cout<<endl;
+
+    int x,y,p,q;
+
+    cout<<"Enter element to insert into the vector: ";
+    cin>>x>>y;
+    cout<<"Enter the position  insert into the vector: ";
+    cin>>p>>q;
+
+
+
+    vector1.emplace(vector1.begin()+p-1,x);
+    vector1.emplace(vector1.begin()+q-1,y);
+
+    //  Afrer  Updating the vector
+
+    cout<<"After Updating The elemenets are: ";
+    for(int i=0;i<vector1.size();i++)
+
+    {
+        cout<<vector1[i]<<" ";
+    }
+
+    return 0;
+
+
+}
+
